@@ -1,0 +1,7 @@
+documentation: 
+  baseurl: http://localhost
+  swagger: 
+    services :  
+        name: ExchangeTypes
+        url: ${documentation.baseurl}:1014/v2/api-docs?group=ExchangeTypes
+        version: 2.0
