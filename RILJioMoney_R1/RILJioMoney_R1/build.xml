@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="RILDealer" default="dev-release">
+
+	<target name="init" unless="properties.loaded">
+		<property file="host.properties" />
+		<property name="properties.loaded" value="true" />
+
+		<property name="javac.target" value="${javac.target}" />
+
+		 
+		<property name="rjio" value="${Workspace.Dir}/${Project.Name}/src/main/java" /> 
+		
+		<path id="project.classpath">
+			<fileset dir="${Lib}">
+				<include name="**/*.jar" />
+			</fileset>
+			<fileset dir="${Build.Dir}">
+				<include name="**/*.jar"/>
+			</fileset>			
+		</path>
+
+	</target>
+	
+	<target name="report-finished">
+		<tstamp>
+			<format property="END_TIME" pattern="d-MMMM-yyyy hh:mm" />
+		</tstamp>
+		<echo message="Finished: ${END_TIME}" />
+	</target>
+
+
+	<!-- ********************************************************************** -->
+	<!-- check the configuration                                                -->
+	<!-- ********************************************************************** -->
+	<target name="clean">
+			<delete dir="${Build.Dir}" />
+			<mkdir dir="${Build.Dir}" />
+		</target>
+	
+	<target name="compile">
+		<echo message="creating jar ........RILJioMoney.jar......." />
+		<mkdir dir="${RJIO.Build.Dir}"  />
+		<javac srcdir="${rjio}" encoding="UTF-8" destdir="${RJIO.Build.Dir}" debug="${javac.debug}" debuglevel="${javac.debuglevel}" deprecation="${javac.deprecation}" optimize="${javac.optimize}" includeantruntime="flase">
+			<classpath>
+				<path refid="project.classpath" />
+			</classpath>
+		</javac>
+		<jar jarfile="${Build.Dir}/${RJIO.jar}" basedir="${RJIO.Build.Dir}" >
+			<fileset dir="${rjio}">
+				<include name="**/*.properties" />
+				<include name="**/*xml" />
+			</fileset>
+		</jar>
+	</target>
+	
+
+	<target name="set-dev">
+		<property name="release.type" value="dev" />
+	</target>
+
+	<target name="dev-release" depends="set-dev,init,clean,compile">
+		<echo message="RIL Dealer project build successfully." />
+		<echo message="now copying files into application context............."/> 
+		
+		<copy file="${Build.Dir}/${RJIO.jar}" todir="${Deploy.Dir}" overwrite="true"></copy>
+		
+	</target>
+</project>
+

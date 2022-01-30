@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd"><!-- ====================================================================== -->
+<!--                                                                        -->
+<!--  Log4j Configuration                                                   -->
+<!--                                                                        -->
+<!-- ====================================================================== -->
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/"
+					 debug="false">
+	<!-- ================================================================== -->
+	<!--   The Console Appender.                                            -->
+	<!-- ================================================================== -->
+
+	<appender name="CONSOLE"
+			  class="org.apache.log4j.ConsoleAppender">
+
+		<param name="Target"
+			   value="System.out"/>
+		<param name="Threshold"
+			   value="info"/>
+		<param name="Encoding"
+			   value="UTF-8"/>
+		<layout class="org.apache.log4j.PatternLayout">
+
+			<param name="ConversionPattern"
+				   value="%d{ABSOLUTE} %-5p [%c{1}]  %m%n"/>
+		</layout>
+	</appender>
+	<appender name="iagent_logger"
+			  class="org.apache.log4j.RollingFileAppender">
+
+		<param name="maxFileSize"
+			   value="5024KB"/>
+		<param name="maxBackupIndex"
+			   value="5"/>
+		<param name="File"
+			   value="D:/NovelVox/iagent-server/webapps/ROOT/WEB-INF/logs/iagent.log"/>
+		<param name="Append"
+			   value="false"/>
+		<param name="threshold"
+			   value="info"/>
+		<layout class="org.apache.log4j.PatternLayout">
+
+			<param name="ConversionPattern"
+				   value="%d (Client-%x.) %5p %c{1}:%L - %m%n"/>
+		</layout>
+	</appender>
+	<appender name="license_logger"
+			  class="org.apache.log4j.RollingFileAppender">
+
+		<param name="maxFileSize"
+			   value="5024KB"/>
+		<param name="maxBackupIndex"
+			   value="5"/>
+		<param name="File"
+			   value="D:/NovelVox/iagent-server/webapps/ROOT/WEB-INF/logs/license.log"/>
+		<param name="threshold"
+			   value="debug"/>
+		<layout class="org.apache.log4j.PatternLayout">
+
+			<param name="ConversionPattern"
+				   value="%d - %m%n"/>
+		</layout>
+	</appender>
+	<appender name="service_logger"
+			  class="org.apache.log4j.RollingFileAppender">
+
+		<param name="maxFileSize"
+			   value="5024KB"/>
+		<param name="maxBackupIndex"
+			   value="5"/>
+		<param name="File"
+			   value="D:/NovelVox/iagent-server/webapps/ROOT/WEB-INF/logs/service.log"/>
+		<param name="threshold"
+			   value="debug"/>
+		<layout class="org.apache.log4j.PatternLayout">
+
+			<param name="ConversionPattern"
+				   value="%d - %m%n"/>
+		</layout>
+	</appender>
+	<!-- ================================================================== -->
+	<logger name="com.mchange">
+
+		<level value="error"/>
+		<appender-ref ref="iagent_logger"/>
+		<appender-ref ref="CONSOLE"/>
+	</logger>
+	<logger name="org.apache">
+
+		<level value="info"/>
+		<appender-ref ref="iagent_logger"/>
+		<appender-ref ref="CONSOLE"/>
+	</logger>
+	<logger name="com.ist.isuite.license">
+
+		<level value="debug"/>
+		<appender-ref ref="license_logger"/>
+	</logger>
+	<logger name="com.ist.agent">
+
+		<level value="debug"/>
+		<appender-ref ref="iagent_logger"/>
+	</logger>
+	<logger name="com.ist.cti">
+
+		<level value="debug"/>
+		<appender-ref ref="iagent_logger"/>
+	</logger>
+	<logger name="com.ist.iagent">
+
+		<level value="debug"/>
+		<appender-ref ref="iagent_logger"/>
+	</logger>
+	<logger name="org.hibernate">
+
+		<level value="ERROR"/>
+		<appender-ref ref="iagent_logger"/>
+		<appender-ref ref="CONSOLE"/>
+	</logger>
+	<logger name="serviceLogger">
+
+		<level value="debug"/>
+		<appender-ref ref="service_logger"/>
+	</logger>
+
+
+
+	<!-- ================================================================== -->
+	<!--   Setup the Root category.                                         -->
+	<!-- ================================================================== -->
+	<root>
+
+		<appender-ref ref="CONSOLE"/>
+	</root>
+</log4j:configuration>

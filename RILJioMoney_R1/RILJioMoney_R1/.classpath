@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry exported="true" kind="lib" path="lib/runtime/activation.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/runtime/flex-messaging-core.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/runtime/iagent-user.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/runtime/j2ee.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/runtime/javaee.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/runtime/log4j-1.2.15.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/runtime/RILJioMoneyInstrumentInquiry-Client.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/runtime/RILJioMoneyIdentityManagement-Client.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/runtime/RILJioMoneyCustomerInquiry-Client.jar" sourcepath="/RILJioMoneyWS"/>
+	<classpathentry exported="true" kind="lib" path="lib/runtime/RILJioMoneyCustomerProfileManagment-Client.jar" sourcepath="/RILJioMoneyWS"/>
+	<classpathentry exported="true" kind="lib" path="lib/runtime/RILJioMoneyNotificationManagement-Client.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/runtime/RILJioMoneyTransactionInquiry-Client.jar" sourcepath="/RILJioMoneyWS"/>
+	<classpathentry exported="true" kind="lib" path="lib/runtime/RILJioMoneyAccountInquiry-Client.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/runtime/RILJioMoneyCustomerAccountManagement-Client.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/runtime/RILJioMoneyInteractionInquiry-Client.jar" sourcepath="/RILJioMoneyWS"/>
+	<classpathentry exported="true" kind="lib" path="lib/runtime/RILJioMoneyAgentAssistedCustomerManagement-Client.jar" sourcepath="/RILJioMoneyWS"/>
+	<classpathentry kind="lib" path="lib/runtime/RILJioMoneyServiceRequestInquiry-Client.jar"/>
+	<classpathentry kind="lib" path="lib/runtime/RILJioMoneyServiceRequestManagement-Client.jar"/>
+	<classpathentry kind="lib" path="lib/runtime/RILJioLCM.jar"/>
+	<classpathentry kind="lib" path="lib/runtime/iagent-common-src.jar"/>
+	<classpathentry kind="lib" path="lib/runtime/RilJioMoneyCommonEntitiesHeader.jar"/>
+	<classpathentry kind="lib" path="lib/runtime/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/runtime/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="lib/runtime/RILJioMoneyCustomerOnBoarding-Client.jar"/>
+	<classpathentry kind="lib" path="lib/runtime/RILJioMoneyInteractionManagement-Client.jar"/>
+	<classpathentry kind="lib" path="lib/runtime/RILJioMoneyInstrumentmanagement-Client.jar"/>
+	<classpathentry kind="lib" path="lib/runtime/RILJioMoneyGetCompositeBalance-Client.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
