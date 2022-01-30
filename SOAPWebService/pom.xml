@@ -75,7 +75,7 @@
 				</executions>
 				<configuration>
 					<sources>
-                        <source>src/main/resources/school.xsd</source>
+                        <source>src/main/resources/xsd/school.xsd</source>
                     </sources>
                     <schemaDirectory>${project.basedir}/src/main/resources/</schemaDirectory>
 					<outputDirectory>${project.basedir}/src/main/java</outputDirectory>
