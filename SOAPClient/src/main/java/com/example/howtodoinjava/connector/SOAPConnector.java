@@ -1,4 +1,4 @@
-package com.example.howtodoinjava;
+package com.example.howtodoinjava.connector;
 
 import org.springframework.stereotype.Component;
 import org.springframework.ws.client.core.support.WebServiceGatewaySupport;

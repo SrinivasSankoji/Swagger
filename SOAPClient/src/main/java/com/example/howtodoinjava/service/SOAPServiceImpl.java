@@ -3,9 +3,9 @@ package com.example.howtodoinjava.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.howtodoinjava.SOAPConnector;
-import com.example.howtodoinjava.schemas.school.StudentDetailsRequest;
-import com.example.howtodoinjava.schemas.school.StudentDetailsResponse;
+import com.example.howtodoinjava.connector.SOAPConnector;
+import com.example.howtodoinjava.schema.school.StudentDetailsRequest;
+import com.example.howtodoinjava.schema.school.StudentDetailsResponse;
 
 @Service
 public class SOAPServiceImpl implements SOAPService {
