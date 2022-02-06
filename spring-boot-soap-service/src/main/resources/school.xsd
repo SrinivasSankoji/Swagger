@@ -1,5 +1,5 @@
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.com/howtodoinjava/xml/school"
-           targetNamespace="http://www.example.com/howtodoinjava/xml/school" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.howtodoinjava.com/xml/school"
+           targetNamespace="http://www.howtodoinjava.com/xml/school" elementFormDefault="qualified">
 
     <xs:element name="StudentDetailsRequest">
         <xs:complexType>
